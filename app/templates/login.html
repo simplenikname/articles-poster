@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form class="login-from" action="/login" method="post">
+        <h2 class="mid-title form-title">Log in</h2>
+        <ul class="one-form">
+            <li>
+                <label for="alias">alias:</label>
+                <input type="text" name="alias" spellcheck="false" required>
+            </li>
+            <li class="ntop-li">
+                <label for="password">password:</label>
+                <input type="password" name="password" spellcheck="false" required>
+            </li>
+            <li class="ntop-li">
+                <input type="submit" name="submit" value="Log in">
+            </li>
+        </ul>
+    </form>
+{% endblock %}

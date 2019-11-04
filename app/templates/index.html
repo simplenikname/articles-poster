@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form class="login-from" action="/post" method="post">
+        <h2 class="mid-title form-title">Post</h2>
+        <ul class="one-form">
+            <li>
+                <label for="title">title:</label>
+                <input type="text" name="title" spellcheck="false" required>
+            </li>
+            <li class="ntop-li">
+                <label for="body">body:</label>
+                <input type="text" name="body" spellcheck="false" required>
+            </li>
+            <li class="ntop-li">
+                <input type="submit" name="submit" value="Post">
+            </li>
+        </ul>
+    </form>
+    <h2 class="mid-title">Articles</h2>
+    {% for article in articles %}
+        {% include '_article.html' %}
+    {% endfor %}
+{% endblock %}
